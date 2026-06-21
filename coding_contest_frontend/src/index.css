@@ -1,0 +1,102 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080a10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+
+  body {
+    background-color: #080a10;
+    color: #f3f4f6;
+  }
+}
+
+/* Custom premium design system elements */
+.glass {
+  background: rgba(15, 22, 42, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+  background: rgba(8, 10, 16, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-modal {
+  background: rgba(13, 17, 30, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15);
+}
+
+/* Animations */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.glow-pulse-success {
+  animation: glow-pulse 2s infinite ease-in-out;
+}
+
+/* Monaco editor custom container */
+.monaco-editor-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom styled scrollbars for Monaco editor details */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
