@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8083/api';
+const API_BASE_URL = 'https://coding-contest-hu9y.onrender.com';
 
 class ApiClient {
     constructor() {
